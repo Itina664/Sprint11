@@ -1,0 +1,23 @@
+.popup-profile__button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin-top: 48px;
+  font-size: 18px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: black;
+  color: white;
+  }
+
+  .popup-profile__button:hover {
+    cursor: pointer;
+  }
+
+  .popup-profile__button:disabled {
+    display: disabled;
+    background-color: transparent;
+    color: rgba(0, 0, 0, .2);
+    cursor: default;
+  }

@@ -1,0 +1,16 @@
+.button-large-image {
+  background-color: transparent;
+  height: 282px;
+  cursor: pointer;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+.button-large-image:focus {
+  outline-color: transparent;
+  cursor: pointer;
+}
+
+
