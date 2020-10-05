@@ -2,10 +2,10 @@
   "name": "spr11_webpack",
   "homepage": "https://Itina664.github.io/Sprint11/",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Praktikum training project",
+  "main": "./src/index.js",
   "scripts": {
-    "build": "NODE_ENV=production rimraf dist && webpack --mode production",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "NODE_ENV=production gh-pages -d dist"
   },
