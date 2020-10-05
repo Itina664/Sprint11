@@ -4,7 +4,7 @@ import FormValidator from './formValidator.js';
 import Popup from './popup.js';
 import UserInfo from './userInfo.js';
 import CardList from './cardList.js';
-import {serverUrl} from "../api.config";
+//import {serverUrl} from "../api.config";
 
 import "./index.css"; 
 
@@ -109,7 +109,7 @@ formProfile.addEventListener('submit', () => {
 }); 
 
 //создаем экземпляр класса Api  для запросов на сервер
-const api = new Api(serverUrl, 
+const api = new Api(`${(NODE_ENV==='development') ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12'}`, 
   {
     authorization: 'ae521062-039b-4526-95e9-ec157c0881d4',
     'Content-Type': 'application/json'
