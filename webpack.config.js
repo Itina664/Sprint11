@@ -20,36 +20,42 @@ module.exports = {
             exclude: /node_modules/,
             use: {
                 loader: "babel-loader"
-            },
-        } | {
+            }
+        },
+        {
             test: /\.css$/i,
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                {
-                    loader:'css-loader',
-                    options: {
-                        importLoaders: 2
-                    } 
-                }, 
-                'postcss-loader'
+            use: [
+                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    {
+                        loader:'css-loader',
+                        options: {
+                            importLoaders: 2
+                        } 
+                    }, 
+                        'postcss-loader'
             ]
-        } | {
+        },
+        {
             test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             use: {
                 loader: 'file-loader',
             },
-        } | {
+        },
+        {
             test: /\.(png|jpg|gif|ico|svg)$/,
             use: [
                 'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
-                {
-                    loader: 'image-webpack-loader',
-                    options: {}
-                },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {}
+                    },
             ]
-        } | {
+        },
+        {
             test: /\.(eot|ttf|otf|woff|woff2)$/,
             loader: 'file-loader?name=./vendor/[name].[ext]',
-        }]
+        },
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -70,7 +76,9 @@ module.exports = {
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })    
+        }) 
+        
+        
     ]
 };
 
