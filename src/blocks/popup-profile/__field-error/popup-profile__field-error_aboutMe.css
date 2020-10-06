@@ -1,0 +1,6 @@
+.popup-profile__field-error_aboutMe {
+  position: absolute;
+  z-index: 999;
+  top: 166px;
+  left: 0;
+}

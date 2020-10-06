@@ -1,0 +1,29 @@
+.profile__button-edit {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 40px;
+  height: 20px;
+  font-size: 10px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 170px;
+  left: 190px;
+}
+
+.profile__button-edit:focus {
+  outline-color: greenyellow;
+}
+
+.profile__button-edit:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 980px) {
+  .profile__button-edit {
+    position: static;
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,7 @@
+.popup__field-error_name {
+  position: absolute;
+  z-index: 999;
+  top: 166px;
+  left: 0;
+}
+
